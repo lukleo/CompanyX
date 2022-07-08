@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>Sales_North_Team</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>All the members from Sales North can see South-East and South-West records</description>
+        <label>Sales North Team</label>
+        <sharedTo>
+            <roleAndSubordinates>Sales_North_Team</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>Sales_North_Team</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Sales_South</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>All the members from Sales South can see South-East and South-West records</description>
+        <label>Sales South</label>
+        <sharedTo>
+            <roleAndSubordinates>Sales_South_Team</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>Sales_South_Team</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closed_Won_Opportunities__c</fullName>
+    <description>Number of closed won opportunities related to this Account, filled by Flow Trigger</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Number of closed won opportunities related to this Account</inlineHelpText>
+    <label>Closed Won Opportunities</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>
