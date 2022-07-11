@@ -3,7 +3,11 @@ public with sharing class TourTriggerHelper {
         for (Tour__c tour : tours) {
             // In the Opportunity they want to have a total count of Completed Tours (consider all tours which at some point completed the goal “Tour Completed”, do not use the Completed Goals field as a criteria because it can move to a different goal further in the process)
             //  Set Status as Completed when Completed Goal moves to Tour Completed
-            if ((oldToursIndexedById.get(tour.Id).Completed_Goals__c != tour.Completed_Goals__c &&   tour.Completed_Goals__c == Constants.TOUR_CG_TOUR_COMPLETED) || (tour.Completed_On__c == null && (tour.Completed_Goals__c == Constants.TOUR_CG_PROPOSAL_GENERATED || tour.Completed_Goals__c == Constants.TOUR_CG_CLIENT_COMMITMENT))) {
+            if (
+                (oldToursIndexedById.get(tour.Id).Completed_Goals__c != tour.Completed_Goals__c && tour.Completed_Goals__c == Constants.TOUR_CG_TOUR_COMPLETED)
+                ||
+                (tour.Completed_On__c == null && (tour.Completed_Goals__c == Constants.TOUR_CG_PROPOSAL_GENERATED || tour.Completed_Goals__c == Constants.TOUR_CG_CLIENT_COMMITMENT))
+            ) {
                 tour.Completed_On__c = Datetime.now();
                 tour.Status__c = Constants.TOUR_STATUS_COMPLETED;
             }
